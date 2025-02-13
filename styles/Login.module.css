@@ -1,0 +1,20 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 4rem 0;
+}
+
+.boxLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/twitterImage.png");
+  background-size: cover;
+  width: 40%;
+}
+
+.boxRight {
+  width: 60%;
+}
