@@ -1,22 +1,151 @@
 .main {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 4rem 0;
+  height: 100vh;
+  background-color: black;
+  color: white;
 }
 
-.title {
-  line-height: 1.15;
-  font-size: 4rem;
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+  width: 20%;
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.icon {
+  font-size: 30px;
+  margin: 20px;
+  width: 50px;
+  rotate: 180deg;
 }
 
-.title a:hover, .title a:focus, .title a:active {
-  text-decoration: underline;
+.profile {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 20px;
+}
+
+.boxBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  border-radius: 50%;
+  height: 40px;
+}
+
+.boxText {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+
+.urlProfile {
+  opacity: 0.5;
+}
+
+.btnLogout {
+  background-color: transparent;
+  color: white;
+  width: 80px;
+  height: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.btnLogout:hover {
+  opacity: 0.8;
+}
+
+.tweets {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  width: 60%;
+}
+
+.tweets h2 {
+  padding-left: 20px;
+}
+
+.tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+}
+
+.textarea {
+  background-color: transparent;
+  width: 80%;
+  color: white;
+  font-size: 15px;
+  font-family: "montheavy_demo";
+}
+
+.submit {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btnTweet {
+  background-color: #3690ed;
+  color: white;
+  width: 80px;
+  height: 30px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+.btnTweet:hover {
+  opacity: 0.8;
+}
+
+.containerTweets {
+  overflow: auto;
+  width: 100%;
+}
+
+.trends {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  width: 20%;
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.hash {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  padding: 20px;
+  border-radius: 15px;
 }

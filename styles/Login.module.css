@@ -17,6 +17,8 @@
 
 .iconLeft {
   font-size: 300px;
+  width: 300px;
+  rotate: 180deg;
 }
 
 .boxRight {
@@ -38,6 +40,8 @@
 .iconRight {
   font-size: 50px;
   margin-bottom: 50px;
+  width: 50px;
+  rotate: 180deg;
 }
 
 .title {
