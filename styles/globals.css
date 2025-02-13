@@ -1,12 +1,17 @@
+@font-face {
+  font-family: "montheavy_demo";
+  src: url("../public/fonts/mont-heavy-webfont.woff2") format("woff2"),
+    url("../public/fonts/mont-heavy-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "montheavy_demo", "Verdana";
 }
 
 * {
   box-sizing: border-box;
-  background-color: black;
-  color: white;
 }

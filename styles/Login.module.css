@@ -2,8 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding: 4rem 0;
+  height: 100vh;
 }
 
 .boxLeft {
@@ -13,8 +12,64 @@
   background-image: url("/twitterImage.png");
   background-size: cover;
   width: 40%;
+  height: 100%;
+}
+
+.iconLeft {
+  font-size: 300px;
 }
 
 .boxRight {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
   width: 60%;
+  padding: 30px;
+}
+
+.containerLog {
+  width: 50%;
+}
+
+.iconRight {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.title {
+  font-size: 80px;
+}
+
+.btnUp {
+  background-color: #3690ed;
+  color: white;
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btnUp:hover {
+  opacity: 0.8;
+}
+
+.btnIn {
+  background-color: transparent;
+  color: #3690ed;
+  width: 200px;
+  height: 40px;
+  border: 1px solid #3690ed;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btnIn:hover {
+  opacity: 0.8;
 }
