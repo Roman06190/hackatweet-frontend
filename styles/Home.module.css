@@ -22,6 +22,7 @@
   margin: 20px;
   width: 50px;
   rotate: 180deg;
+  cursor: pointer;
 }
 
 .profile {
@@ -72,63 +73,13 @@
   opacity: 0.8;
 }
 
-.tweets {
+.middle {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   height: 100%;
   width: 60%;
-}
-
-.tweets h2 {
-  padding-left: 20px;
-}
-
-.tweet {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-  padding: 20px;
-}
-
-.textarea {
-  background-color: transparent;
-  width: 80%;
-  color: white;
-  font-size: 15px;
-  font-family: "montheavy_demo";
-}
-
-.submit {
-  display: flex;
-  width: 80%;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.btnTweet {
-  background-color: #3690ed;
-  color: white;
-  width: 80px;
-  height: 30px;
-  border: none;
-  border-radius: 50px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-left: 50px;
-}
-
-.btnTweet:hover {
-  opacity: 0.8;
-}
-
-.containerTweets {
-  overflow: auto;
-  width: 100%;
 }
 
 .trends {
