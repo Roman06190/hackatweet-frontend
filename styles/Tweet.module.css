@@ -51,3 +51,8 @@
 .btnTweet:hover {
   opacity: 0.8;
 }
+
+.containTweets {
+  overflow: auto;
+  width: 100%;
+}

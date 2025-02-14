@@ -1,15 +1,14 @@
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Hashtag.module.css";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDove } from "@fortawesome/free-solid-svg-icons";
-import Tweet from "./Tweet";
 import Trends from "./Trends";
 import Link from "next/link";
 
-function Home() {
+function Hashtag({ params: { slug } }) {
+  const [searchTag, setSearchTag] = useState("");
   const [trends, setTrends] = useState([]);
-  const [refresh, setRefresh] = useState(false);
   const user = useSelector((state) => state.user.value);
 
   // Fetch des #
@@ -20,17 +19,13 @@ function Home() {
       .then((data) => {
         setTrends(data.hashtag);
       });
-  }, [refresh]);
+  }, []);
 
   const trendList = trends.map((data, i) => {
     if (data.hashtag !== null) {
       return <Trends key={i} {...data} />;
     }
   });
-
-  function refresher() {
-    setRefresh(!refresh);
-  }
 
   return (
     <div className={styles.main}>
@@ -62,7 +57,16 @@ function Home() {
         </div>
       </div>
       <div className={styles.middle}>
-        <Tweet refresher={refresher} />
+        <div className={styles.home}>
+          <h2>Hashtag</h2>
+          <div className={styles.search}>
+            <textarea
+              className={styles.textarea}
+              onChange={(e) => setSearchTag(e.target.value)}
+              value={searchTag}
+            ></textarea>
+          </div>
+        </div>
       </div>
       <div className={styles.trends}>
         <h2>Trends</h2>
@@ -72,4 +76,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Hashtag;

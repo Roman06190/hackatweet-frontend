@@ -100,3 +100,34 @@
   border-radius: 15px;
   overflow: auto;
 }
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 200px;
+  width: 100%;
+}
+
+.home h2 {
+  padding-left: 20px;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+}
+
+.textarea {
+  background-color: transparent;
+  width: 80%;
+  color: white;
+  font-size: 15px;
+  font-family: "montheavy_demo";
+}
