@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "montheavy_demo";
+  font-family: "montheavy_demo", sans-serif;
   src: url("../public/fonts/mont-heavy-webfont.woff2") format("woff2"),
     url("../public/fonts/mont-heavy-webfont.woff") format("woff");
   font-weight: normal;

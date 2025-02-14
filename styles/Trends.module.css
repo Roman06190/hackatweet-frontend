@@ -1,3 +1,7 @@
 .count {
   opacity: 0.5;
 }
+
+.container {
+  overflow: auto;
+}

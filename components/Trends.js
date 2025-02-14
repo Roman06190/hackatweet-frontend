@@ -1,10 +1,10 @@
 import styles from "../styles/Trends.module.css";
 
-function Trends() {
+function Trends(props) {
   return (
-    <div>
-      <p>＃hackatweet</p>
-      <p className={styles.count}>2 Tweets</p>
+    <div className={styles.container}>
+      <p>{props.hashtag}</p>
+      <p className={styles.count}>{props.tweet.length} Tweets</p>
     </div>
   );
 }
