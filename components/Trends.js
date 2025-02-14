@@ -5,7 +5,7 @@ function Trends(props) {
   return (
     <>
       <div className={styles.container}>
-        <p>{props.hashtag}</p>
+        <p className={styles.hashtag}>{props.hashtag}</p>
         <p className={styles.count}>{props.tweet.length} Tweets</p>
       </div>
     </>

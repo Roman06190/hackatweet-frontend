@@ -5,3 +5,12 @@
 .container {
   overflow: auto;
 }
+
+.hashtag {
+  font-weight: bold;
+}
+
+.hashtag:hover {
+  cursor: pointer;
+  color: #42a8f5;
+}
