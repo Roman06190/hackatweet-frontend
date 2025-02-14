@@ -41,8 +41,16 @@
   cursor: pointer;
 }
 
+.iconHeart :hover {
+  color: rgb(179, 43, 43);
+}
+
 .iconTrash {
   width: 15px;
   margin-left: 5px;
   cursor: pointer;
+}
+
+.iconTrash :hover {
+  color: rgb(191, 191, 191);
 }

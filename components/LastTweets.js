@@ -1,8 +1,23 @@
 import styles from "../styles/LastTweets.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
 
 function LastTweets(props) {
+  const [timer, setTimer] = useState(0);
+
+  useEffect(() => {
+    function howManyTime() {
+      let posted = `${Date.parse(props.date)}`;
+      let date = Date.now();
+      let result = date - posted;
+      let finalResult = new Date(result);
+
+      setTimer(finalResult.getHours());
+    }
+    howManyTime();
+  }, []);
+
   return (
     <div className={styles.main}>
       <div className={styles.profile}>
@@ -10,7 +25,7 @@ function LastTweets(props) {
         <div className={styles.boxText}>
           <h3>{props.author.firstname}</h3>
           <p className={styles.para}>@{props.author.username}</p>
-          <p className={styles.para}>. {props.date}</p>
+          <p className={styles.para}>.{timer} hours</p>
         </div>
       </div>
       <div>{props.content}</div>
