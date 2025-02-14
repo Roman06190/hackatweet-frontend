@@ -82,6 +82,11 @@
   width: 60%;
 }
 
+.containTweets {
+  overflow: auto;
+  width: 100%;
+}
+
 .trends {
   display: flex;
   flex-direction: column;

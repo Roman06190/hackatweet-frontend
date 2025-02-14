@@ -9,35 +9,18 @@ import Tweet from "./Tweet";
 import Link from "next/link";
 
 function Home() {
-  // const deleteable = useSelector((state) => state.deleteable.value);
-
-  const [tweetData, setTweetData] = useState([
-    {
-      content: "Je suis un tweet",
-      date: Date.now(),
-      author: "Herve",
-      hashtag: "#DestroyAllHuman",
-    },
-  ]);
-  const [lastTweet, setLastTweet] = useState({});
+  const [lastTweet, setLastTweet] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/allTweets")
+    fetch("http://localhost:3000/tweet/allTweets")
       .then((response) => response.json())
       .then((data) => {
-        setLastTweet(data.allTweets[0]);
-        setTweetData(data.allTweets.filter((data, i) => i > 0));
+        setLastTweet(data.tweets);
       });
   }, []);
 
-  console.log("tweets are:", tweetData, "and last tweet is:", lastTweet);
-
-  const tweets = tweetData.map((data, i) => {
-    const isDeleteable = tweetData.some(
-      (deleteable) => deleteable.title === data.tweet
-    );
-
-    return <Tweet key={i} {...data} isDeleteable={isDeleteable} />;
+  const tweets = lastTweet.map((data, i) => {
+    return <LastTweets key={i} {...data} />;
   });
 
   return (
@@ -69,8 +52,7 @@ function Home() {
       </div>
       <div className={styles.middle}>
         <Tweet />
-        <LastTweets />
-        {tweets}
+        <div className={styles.containTweets}>{tweets}</div>
       </div>
       <div className={styles.trends}>
         <h2>Trends</h2>
