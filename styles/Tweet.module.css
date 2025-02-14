@@ -27,6 +27,7 @@
   color: white;
   font-size: 15px;
   font-family: "montheavy_demo";
+  resize: none;
 }
 
 .submit {
