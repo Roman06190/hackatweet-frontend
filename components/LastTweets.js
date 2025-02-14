@@ -19,14 +19,29 @@ function LastTweets(props) {
     howManyTime();
   }, []);
 
+  const handleTrash = () => {
+    fetch("http://localhost:3000/tweet/dlttweets", {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        tweet: props,
+      }),
+    })
+      .then((response) => response.json)
+      .then(() => {
+        props.refresh();
+      });
+  };
+
   const handleLikeTweet = () => {
     setLiked(!liked);
     console.log(liked);
   };
+  let hearthStyle = { color: "#ffffff" };
   if (liked) {
-    {
-      color: "#e74c3c";
-    }
+    hearthStyle = {
+      color: "#e74c3c",
+    };
   }
 
   return (
@@ -44,11 +59,15 @@ function LastTweets(props) {
         <FontAwesomeIcon
           className={styles.iconHeart}
           icon={faHeart}
-          style={{ color: "#ffffff" }}
+          style={hearthStyle}
           onClick={() => handleLikeTweet()}
         />
-        <span>0</span>
-        <FontAwesomeIcon className={styles.iconTrash} icon={faTrashCan} />
+        <span>{liked ? 1 : 0}</span>
+        <FontAwesomeIcon
+          className={styles.iconTrash}
+          icon={faTrashCan}
+          onClick={() => handleTrash()}
+        />
       </div>
     </div>
   );

@@ -35,8 +35,12 @@ function Tweet(props) {
       });
   }, [refresh]);
 
+  function rerefresher() {
+    setRefresh(!refresh);
+  }
+
   const tweets = lastTweet.map((data, i) => {
-    return <LastTweets key={i} {...data} />;
+    return <LastTweets key={i} {...data} refresh={rerefresher} />;
   });
 
   return (
